@@ -56,6 +56,8 @@
       flex-direction: column; /* Sắp xếp các nút theo chiều dọc */
       align-items: center;
       gap: 15px; /* Khoảng cách giữa các nút */
+      width: 100%;
+      box-sizing: border-box;
     }
 
     /* Các nút */
@@ -85,6 +87,17 @@
       font-size: 18px;
       margin-top: 30px;
     }
+
+    /* Điều chỉnh cho màn hình rộng (máy tính, xoay ngang) */
+    @media (min-width: 768px) {
+      .content {
+        padding-top: 100px;
+      }
+      .button-container {
+        flex-direction: row; /* Sắp xếp các nút theo chiều ngang trên màn hình rộng */
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -105,7 +118,8 @@
       <a href="https://telegram.org/download" class="button">Tải telegram ở đây nhé</a>
     </div>
 
-    <p class="red-text">😈Nếu bạn đang ở tiktok, ấn nút 3 chấm trên góc rồi chuyển sang trình duyệt nhé</p>
+    <!-- Câu văn bản đỏ được chia dòng -->
+    <p class="red-text">😈Nếu bạn đang ở tiktok, ấn nút 3 chấm trên góc<br>rồi chuyển sang trình duyệt nhé</p>
   </div>
 </body>
 </html>
