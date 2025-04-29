@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trang Chủ</title>
   <style>
-    /* Đặt video là nền */
+    /* Đặt video làm nền */
     body, html {
       margin: 0;
       padding: 0;
@@ -33,11 +33,36 @@
       font-family: Arial, sans-serif;
     }
 
-    h1, p {
+    h1, h2, p {
       margin: 0;
       font-size: 24px;
     }
 
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .button {
+      background-color: #1e90ff;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .button:hover {
+      background-color: #4682b4;
+    }
+
+    .red-text {
+      color: red;
+      font-weight: bold;
+      font-size: 18px;
+    }
   </style>
 </head>
 <body>
@@ -50,6 +75,15 @@
     <h1>Chào mừng bạn đã đến với kênh 18+ của</h1>
     <h2>SÁCH KHÔNG CHỮ</h2>
     <p>Chắc chắn bạn đã đủ 18 tuổi?</p>
+    <p>Xem video ở dưới đây</p>
+
+    <div class="button-container">
+      <a href="https://t.me/your_telegram_channel" class="button">KÊNH TELEGRAM (xem video miễn phí mỗi ngày)</a>
+      <a href="https://your_website.com" class="button">CÁCH XEM Ở ĐÂY</a>
+      <a href="https://telegram.org/download" class="button">Tải telegram ở đây nhé</a>
+    </div>
+
+    <p class="red-text">😈Nếu bạn đang ở tiktok, ấn nút 3 chấm trên góc rồi chuyển sang trình duyệt nhé</p>
   </div>
 </body>
 </html>
