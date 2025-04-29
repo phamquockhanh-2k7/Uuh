@@ -39,29 +39,36 @@
     }
 
     .button-container {
-      margin-top: 20px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column; /* Sắp xếp các nút theo chiều dọc */
+      align-items: center;
     }
 
     .button {
-      background-color: #1e90ff;
+      background-color: rgba(30, 144, 255, 0.7); /* Nền nút màu xanh nhạt trong suốt */
       color: white;
-      padding: 10px 20px;
-      font-size: 16px;
+      padding: 12px 24px;
+      font-size: 18px;
       border: none;
       cursor: pointer;
-      margin: 10px;
+      margin: 15px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      width: 80%; /* Chiều rộng nút */
+      max-width: 400px; /* Đảm bảo nút không quá rộng */
+      transition: background-color 0.3s ease; /* Thêm hiệu ứng khi hover */
     }
 
     .button:hover {
-      background-color: #4682b4;
+      background-color: rgba(70, 130, 180, 0.8); /* Màu nền khi hover */
     }
 
     .red-text {
       color: red;
       font-weight: bold;
       font-size: 18px;
+      margin-top: 30px;
     }
   </style>
 </head>
