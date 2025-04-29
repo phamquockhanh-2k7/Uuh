@@ -8,6 +8,7 @@
         body {
             margin: 0;
             overflow: hidden;
+            color: white;
         }
         video {
             position: absolute;
@@ -17,13 +18,31 @@
             height: 100%;
             object-fit: cover;
         }
+        .text-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .bottom-text {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 18px;
+            font-weight: normal;
+        }
     </style>
 </head>
 <body>
+    <!-- Video -->
     <video autoplay loop muted>
-        <source src="public/103434-662525884.mp4" type="video/mp4">
+        <source src="/103434-662525884.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <p style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 24px;">Đây là video</p>
+
+    <!-- Text Overlay -->
+    <div class="text-overlay">Đây là video nền</div>
+    <div class="bottom-text">Video này sẽ luôn chạy lặp lại và không thể tua được.</div>
 </body>
 </html>
