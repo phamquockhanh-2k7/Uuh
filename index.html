@@ -3,123 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang Chủ</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Sách Không Chữ</title>
   <style>
-    /* Đặt video làm nền */
-    body, html {
+    body {
+      background: url('https://example.com/background.jpg') no-repeat center center fixed;
+      background-size: cover;
       margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .background-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1; /* Đưa video về phía sau nội dung */
-    }
-
-    /* Nội dung hiển thị trên video */
-    .content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      color: white;
-      padding-top: 50px;
       font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      padding: 0 10px;
     }
 
-    h1, h2, p {
-      margin: 0;
+    .warning {
+      color: red;
+      font-weight: bold;
+      background-color: rgba(255,255,255,0.7);
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 90%;
+      margin: 20px auto 10px;
+    }
+
+    h1 {
+      color: yellow;
       font-size: 24px;
+      margin: 10px 0;
     }
 
-    /* Đổi màu văn bản cho dễ nhìn */
-    h1, h2 {
-      color: #FFD700; /* Màu vàng sáng */
-      font-weight: bold; /* Tô đậm */
+    h2 {
+      color: orange;
+      font-weight: bold;
+      margin: 5px 0;
     }
 
     p {
-      color: #FF6347; /* Màu đỏ cam */
-      font-weight: bold; /* Tô đậm */
-    }
-
-    .button-container {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column; /* Sắp xếp các nút theo chiều dọc */
-      align-items: center;
-      gap: 15px; /* Khoảng cách giữa các nút */
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    /* Các nút */
-    .button {
-      padding: 12px 24px;
-      font-size: 18px;
-      border: 2px solid rgba(255, 255, 255, 0.5);
-      background-color: rgba(255, 255, 255, 0.3); /* Nền trong suốt với viền trắng */
-      color: #1E90FF; /* Màu chữ trên nút */
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: bold;
-      transition: background-color 0.3s, border-color 0.3s;
-      width: 80%;
-      max-width: 350px;
-      text-align: center;
-    }
-
-    .button:hover {
-      background-color: rgba(255, 255, 255, 0.5); /* Nền sáng hơn khi hover */
-      border-color: rgba(255, 255, 255, 0.8);
-    }
-
-    .red-text {
       color: red;
+      font-size: 20px;
       font-weight: bold;
-      font-size: 18px;
-      margin-top: 30px;
     }
 
-    /* Điều chỉnh cho màn hình rộng (máy tính, xoay ngang) */
-    @media (min-width: 768px) {
-      .content {
-        padding-top: 100px;
+    a.button {
+      display: block;
+      background-color: rgba(0,0,0,0.6);
+      color: #00ffff;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 20px;
+      margin: 10px auto;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    a.button.orange {
+      color: #ffa500;
+    }
+
+    a.button.sky {
+      color: #87ceeb;
+    }
+
+    @media screen and (max-width: 768px) {
+      h1, h2, p {
+        font-size: 16px;
       }
-      .button-container {
-        flex-direction: row; /* Sắp xếp các nút theo chiều ngang trên màn hình rộng */
-        justify-content: center;
+      a.button {
+        width: 90%;
+        font-size: 16px;
       }
     }
   </style>
 </head>
 <body>
-  <video class="background-video" autoplay loop muted>
-    <source src="/public/103434-662525884.mp4" type="video/mp4">
-    Trình duyệt của bạn không hỗ trợ video.
-  </video>
 
-  <div class="content">
-    <h1>Chào mừng bạn đã đến với kênh 18+ của</h1>
-    <h2>SÁCH KHÔNG CHỮ</h2>
-    <p><strong>Chắc chắn bạn đã đủ 18 tuổi?</strong></p>
-    <p><strong>Xem video ở dưới đây</strong></p>
-
-    <div class="button-container">
-      <a href="https://t.me/your_telegram_channel" class="button">KÊNH TELEGRAM (xem video miễn phí mỗi ngày)</a>
-      <a href="https://your_website.com" class="button">CÁCH XEM Ở ĐÂY</a>
-      <a href="https://telegram.org/download" class="button">Tải telegram ở đây nhé</a>
-    </div>
-
-    <!-- Câu văn bản đỏ được chia dòng -->
-    <p class="red-text">😈Nếu bạn đang ở tiktok, ấn nút 3 chấm trên góc<br>rồi chuyển sang trình duyệt nhé</p>
+  <div class="warning">
+    😈 Nếu bạn đang ở TikTok,<br>ấn nút 3 chấm trên góc rồi chuyển sang trình duyệt nhé
   </div>
+
+  <h2>Chào mừng bạn đã đến với kênh 18+ của</h2>
+  <h1><strong>SÁCH KHÔNG CHỮ</strong></h1>
+  <p><strong>Chắc chắn bạn đã đủ 18 tuổi?<br>Xem video ở dưới đây</strong></p>
+
+  <a href="https://t.me/kenh18_moi_ngay" class="button">KÊNH TELEGRAM (xem video miễn phí mỗi ngày)</a>
+  <a href="https://t.me/kenh18_moi_ngay/123" class="button orange">CÁCH XEM Ở ĐÂY</a>
+  <a href="https://telegram.org/dl" class="button sky">Tải Telegram ở đây nhé</a>
+
 </body>
 </html>
