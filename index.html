@@ -3,93 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sách Không Chữ</title>
+  <title>Link vào kênh</title>
   <style>
-    body {
-      background: url('https://example.com/background.jpg') no-repeat center center fixed;
-      background-size: cover;
+    body, html {
       margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-      padding: 0 10px;
+      overflow: hidden;
     }
 
-    .warning {
-      color: red;
-      font-weight: bold;
-      background-color: rgba(255,255,255,0.7);
-      padding: 10px;
-      border-radius: 10px;
-      max-width: 90%;
-      margin: 20px auto 10px;
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* làm mờ nền */
+      z-index: -1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 30px 20px;
+      color: white;
     }
 
     h1 {
-      color: yellow;
-      font-size: 24px;
-      margin: 10px 0;
+      color: #ffcc00;
+      font-size: 36px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px black;
     }
 
     h2 {
       color: orange;
-      font-weight: bold;
-      margin: 5px 0;
+      font-size: 24px;
+      margin-bottom: 20px;
     }
 
     p {
       color: red;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: block;
+      width: 80%;
+      max-width: 300px;
+      margin: 15px auto;
+      padding: 15px;
+      text-decoration: none;
+      border-radius: 8px;
       font-size: 20px;
       font-weight: bold;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      animation: pop 1s ease;
     }
 
-    a.button {
-      display: block;
-      background-color: rgba(0,0,0,0.6);
+    .button:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.2);
       color: #00ffff;
-      font-weight: bold;
-      padding: 12px 20px;
-      border-radius: 20px;
-      margin: 10px auto;
-      width: 80%;
-      max-width: 400px;
-      text-align: center;
-      text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
 
-    a.button.orange {
-      color: #ffa500;
+    .button.orange { background-color: #ff6600; }
+    .button.sky { background-color: #00bfff; }
+    .button.red { background-color: #ff0033; }
+
+    .warning {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: red;
+      padding: 10px;
+      font-size: 18px;
+      margin-bottom: 20px;
+      border: 2px dashed red;
     }
 
-    a.button.sky {
-      color: #87ceeb;
+    @keyframes pop {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
     @media screen and (max-width: 768px) {
-      h1, h2, p {
-        font-size: 16px;
-      }
-      a.button {
-        width: 90%;
-        font-size: 16px;
-      }
+      h1 { font-size: 28px; }
+      h2 { font-size: 20px; }
+      p { font-size: 16px; }
+      .button { font-size: 18px; padding: 12px; }
     }
   </style>
 </head>
 <body>
+  <!-- NỀN VIDEO -->
+  <video class="background-video" autoplay loop muted>
+    <source src="/public/103434-662525884.mp4" type="video/mp4">
+    Trình duyệt của bạn không hỗ trợ video.
+  </video>
+  <div class="overlay"></div>
 
-  <div class="warning">
-    😈 Nếu bạn đang ở TikTok,<br>ấn nút 3 chấm trên góc rồi chuyển sang trình duyệt nhé
+  <div class="container">
+    <div class="warning">Nếu bạn đang dùng TikTok, hãy mở link bằng trình duyệt để vào kênh!</div>
+    <h1>Vào kênh chính</h1>
+    <h2>Chỉ dành cho người trên 18 tuổi</h2>
+    <p>Nhấn nút bên dưới để tiếp tục</p>
+    
+    <a href="https://t.me/tenkenhchinh" class="button red">🔞 Kênh chính</a>
+    <a href="https://t.me/kenhphu1" class="button orange">🔥 Kênh phụ 1</a>
+    <a href="https://t.me/kenhphu2" class="button sky">📽 Kênh phụ 2</a>
   </div>
-
-  <h2>Chào mừng bạn đã đến với kênh 18+ của</h2>
-  <h1><strong>SÁCH KHÔNG CHỮ</strong></h1>
-  <p><strong>Chắc chắn bạn đã đủ 18 tuổi?<br>Xem video ở dưới đây</strong></p>
-
-  <a href="https://t.me/kenh18_moi_ngay" class="button">KÊNH TELEGRAM (xem video miễn phí mỗi ngày)</a>
-  <a href="https://t.me/kenh18_moi_ngay/123" class="button orange">CÁCH XEM Ở ĐÂY</a>
-  <a href="https://telegram.org/dl" class="button sky">Tải Telegram ở đây nhé</a>
-
 </body>
 </html>
