@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trang Chủ</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     /* Đặt video làm nền */
     body, html {
@@ -19,7 +20,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Đảm bảo video phủ toàn bộ màn hình */
+      object-fit: cover;
       z-index: -1; /* Đưa video về phía sau nội dung */
     }
 
@@ -43,25 +44,28 @@
       display: flex;
       flex-direction: column; /* Sắp xếp các nút theo chiều dọc */
       align-items: center;
+      gap: 15px; /* Khoảng cách giữa các nút */
     }
 
+    /* Các nút */
     .button {
-      background-color: rgba(30, 144, 255, 0.7); /* Nền nút màu xanh nhạt trong suốt */
-      color: white;
       padding: 12px 24px;
       font-size: 18px;
-      border: none;
-      cursor: pointer;
-      margin: 15px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.3); /* Nền trong suốt với viền trắng */
+      color: white;
       text-decoration: none;
-      border-radius: 8px;
-      width: 80%; /* Chiều rộng nút */
-      max-width: 400px; /* Đảm bảo nút không quá rộng */
-      transition: background-color 0.3s ease; /* Thêm hiệu ứng khi hover */
+      border-radius: 50px;
+      font-weight: bold;
+      transition: background-color 0.3s, border-color 0.3s;
+      width: 80%;
+      max-width: 350px;
+      text-align: center;
     }
 
     .button:hover {
-      background-color: rgba(70, 130, 180, 0.8); /* Màu nền khi hover */
+      background-color: rgba(255, 255, 255, 0.5); /* Nền sáng hơn khi hover */
+      border-color: rgba(255, 255, 255, 0.8);
     }
 
     .red-text {
