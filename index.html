@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Page</title>
+    <title>Video Background</title>
     <style>
         body {
             margin: 0;
             overflow: hidden;
             color: white;
+            font-family: Arial, sans-serif;
         }
+        /* Video cover toàn màn hình */
         video {
             position: absolute;
             top: 0;
@@ -17,7 +19,9 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            z-index: -1;
         }
+        /* Chữ hiển thị trên video */
         .text-overlay {
             position: absolute;
             top: 20px;
@@ -27,21 +31,20 @@
         }
         .bottom-text {
             position: absolute;
-            bottom: 10px;
-            left: 10px;
+            bottom: 20px;
+            left: 20px;
             font-size: 18px;
-            font-weight: normal;
         }
     </style>
 </head>
 <body>
-    <!-- Video -->
+    <!-- Video với đường dẫn đến file mp4 -->
     <video autoplay loop muted>
         <source src="/103434-662525884.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
-    <!-- Text Overlay -->
+    <!-- Text hiển thị trên video -->
     <div class="text-overlay">Đây là video nền</div>
     <div class="bottom-text">Video này sẽ luôn chạy lặp lại và không thể tua được.</div>
 </body>
