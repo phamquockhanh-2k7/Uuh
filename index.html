@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sách Không Chữ - 18+</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kênh 18+ | SÁCH KHÔNG CHỮ</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
-    .background-video {
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: sans-serif;
+    }
+
+    .background-wrapper {
       position: fixed;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -2;
+    }
+
+    .background-wrapper img,
+    .background-wrapper video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      z-index: -1;
+    }
+
+    .overlay {
+      position: relative;
+      z-index: 1;
+    }
+
+    .backdrop {
+      background-color: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(12px);
     }
   </style>
 </head>
-<body class="flex items-center justify-center min-h-screen relative overflow-hidden">
+<body class="flex items-center justify-center min-h-screen text-center text-white">
 
-  <!-- Nền video -->
-  <video class="background-video" autoplay loop muted playsinline>
-    <source src="/public/103434-662525884.mp4" type="video/mp4">
-    Trình duyệt của bạn không hỗ trợ video.
-  </video>
+  <!-- Ảnh nền fallback -->
+  <div class="background-wrapper">
+    <img src="/public/ai-generated-8707783_1280.png" alt="Ảnh nền fallback">
+    <video autoplay loop muted playsinline>
+      <source src="/public/103434-662525884.mp4" type="video/mp4" />
+    </video>
+  </div>
 
-  <!-- Nội dung -->
-  <div class="text-center bg-black bg-opacity-40 backdrop-blur-lg rounded-2xl p-6 md:p-10 max-w-md md:max-w-4xl w-full text-yellow-200">
-    <h1 class="text-3xl font-bold mb-4">Chào mừng bạn đã đến với kênh 18+ của</h1>
-    <h2 class="text-4xl font-bold mb-4 text-orange-500">SÁCH KHÔNG CHỮ</h2>
-    <p class="text-lg font-semibold mb-2">Chắc chắn bạn đã đủ 18 tuổi?</p>
-    <p class="text-lg font-semibold mb-6">Xem video ở dưới đây</p>
+  <!-- Nội dung overlay -->
+  <div class="overlay px-4">
+    <div class="backdrop p-6 md:p-10 rounded-3xl shadow-2xl max-w-xl mx-auto">
+      <h1 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-4 leading-snug">Chào mừng bạn đã đến với kênh 18+ của<br />SÁCH KHÔNG CHỮ</h1>
+      <p class="text-lg font-semibold text-yellow-200 mb-2">Chắc chắn bạn đã đủ 18 tuổi?</p>
+      <p class="text-white font-semibold text-base mb-4">Xem video ở dưới đây</p>
 
-    <!-- Nút responsive -->
-    <div class="flex flex-col md:flex-row md:justify-center md:gap-6 gap-4">
-      <a href="https://t.me/upbaiviet_robot?start=BQADAQADSRAAAgsMiETwQ2zsY9WArhYE" target="_blank"
-         class="px-6 py-3 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 text-blue-200 font-bold shadow-lg backdrop-blur-md transition text-sm md:text-base">
-        📣 KÊNH TELEGRAM<br><span class="text-xs font-medium">(xem video miễn phí mỗi ngày)</span>
-      </a>
-      <a href="https://t.me/+vD8uKg_4n_lmZmQ1" target="_blank"
-         class="px-6 py-3 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 text-green-200 font-bold shadow-lg backdrop-blur-md transition text-sm md:text-base">
-        📘 KÊNH THÔNG BÁO + CÁCH XEM
-      </a>
-      <a href="https://telegram.org" target="_blank"
-         class="px-6 py-3 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 text-pink-200 font-bold shadow-lg backdrop-blur-md transition text-sm md:text-base">
-        📥 TẢI TELEGRAM Ở ĐÂY NHÉ
-      </a>
+      <div class="flex flex-col md:flex-row gap-4 justify-center mt-4">
+        <a href="https://t.me/your_channel" target="_blank" class="px-6 py-3 bg-white bg-opacity-30 hover:bg-opacity-50 backdrop-blur-md text-blue-100 rounded-full font-semibold text-lg transition">
+          KÊNH TELEGRAM<br><small>(xem video miễn phí mỗi ngày)</small>
+        </a>
+        <a href="#guide" class="px-6 py-3 bg-white bg-opacity-30 hover:bg-opacity-50 backdrop-blur-md text-green-100 rounded-full font-semibold text-lg transition">
+          CÁCH XEM Ở ĐÂY
+        </a>
+        <a href="https://telegram.org/dl" target="_blank" class="px-6 py-3 bg-white bg-opacity-30 hover:bg-opacity-50 backdrop-blur-md text-red-100 rounded-full font-semibold text-lg transition">
+          Tải Telegram ở đây nhé
+        </a>
+      </div>
+
+      <p class="mt-6 text-red-500 font-bold text-sm leading-tight">
+        😈 Nếu bạn đang ở TikTok, ấn nút 3 chấm trên góc<br />rồi chuyển sang trình duyệt nhé
+      </p>
     </div>
-
-    <p class="mt-6 text-red-400 font-bold text-sm leading-snug">
-      😈Nếu bạn đang ở tiktok, ấn nút 3 chấm<br>trên góc rồi chuyển sang trình duyệt nhé
-    </p>
   </div>
 
 </body>
